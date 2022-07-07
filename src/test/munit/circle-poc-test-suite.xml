@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="circle-poc-test-suite.xml" />
+	<munit:test name="circle-poc-test-suite-circle-pocFlowTest" doc:id="04d7de17-b222-49e0-a2e9-216fc2e012cc" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to circle-pocFlow" doc:id="fd7afb00-564e-48ab-ab65-70a33c1a5703" name="circle-pocFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert doc:name="Assert expression" doc:id="bfa1b6ee-71b5-46cc-b042-2cfae0620dff" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
